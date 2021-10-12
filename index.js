@@ -98,5 +98,7 @@ let server = http.createServer(mainServer);
 
 server.listen(3000, (err) => {
     if(!err)
-        console.log(`Server listening to port: ${3000}`);
+        console.log(`Server listening to port: ${process.env.port || 3000}`);
+    else
+        console.log('[ERROR] ' + err.message);
 });
