@@ -47,6 +47,6 @@ let client_request = (headers, path, method, queryStringObj, payload, callback) 
 picArr.forEach(async (imgDiv, index) => {
     let image_number = ('000'+(index+1)).substr(-3);
 
-    picArr[index].src = await `http://localhost:3000/public/src/image_part_${image_number}.png`;
+    picArr[index].src = await `http://http1response.herokuapp.com/public/src/image_part_${image_number}.png`;
     
 });
