@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const url = require('url');
-const path= require('path');
+const path = require('path');
 const routers = require('./http-routers.list');
 let stringDecoder = require('string_decoder').StringDecoder;
 let controller = require('./controller.js')
@@ -96,7 +96,7 @@ let mainServer = (req, res) => {
 let server = http.createServer(mainServer);
 
 
-server.listen(3000, (err) => {
+server.listen(process.env.port || 3000, (err) => {
     if(!err)
         console.log(`Server listening to port: ${process.env.port || 3000}`);
     else
